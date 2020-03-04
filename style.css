@@ -1,23 +1,34 @@
+.navbar {
+    background: rgb(220, 152, 236);
+}
+
 .nav-link {
     position: absolute;
     top: 0px;
     right: 0px;
 }
 
+html {
+    color: white;
+}
+
 body{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #333f48;
+
 }
 
 #container{
     margin : 20px auto;
-    background-color: #5f5c5a;
+    background-color: #52585a;
     height: 700px;
     width : 700px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
     position: relative;
+    color: white;
+    
 }
 #start{
     font-size: 1.5em;
@@ -28,8 +39,6 @@ body{
     margin: 20px;
     top: 260px;
     left: 80px;
-    /* padding-top: 10px; */
-    /* bottom: 4px; */
     border: 2px solid #FFFFFF;
     text-align: center;
     cursor: pointer;
@@ -39,19 +48,6 @@ body{
 #start:hover{
     /* border: 3px solid lightseagreen; */
     color : lightseagreen;
-}
-
-#qImg{
-    width : 200px;
-    height : 200px;
-    position: absolute;
-    left : 0px;
-    top : 0px;
-}
-#qImg img{
-    width : 200px;
-    height : 200px;
-    border-top-left-radius: 5px;
 }
 
 #question{
@@ -67,7 +63,6 @@ body{
     padding-right: 20px;
     padding-bottom: 25px;
     padding-left: 15px;
-    /* padding : 15px; */
     font-size: 1.25em;
 }
 
@@ -82,13 +77,13 @@ body{
     display: inline-block;
     width : 135px;
     text-align: center;
-    border : 1px solid grey;
+    border : 1px solid whitesmoke;
     border-radius: 5px;
     cursor: pointer;
     padding : 5px;
 }
 .choice:hover{
-    border : 2px solid grey;
+    border : 2px solid rgb(230, 219, 219);
     font-weight: bold;
 }
 
@@ -135,7 +130,7 @@ body{
 }
 #scoreContainer{
     margin : 20px auto;
-    background-color: rgb(229, 205, 235);
+    background-color: rgb(220, 152, 236);
     opacity: 1;
     height: 250px;
     width : 700px;
@@ -144,19 +139,13 @@ body{
     position: fixed;
     display: none;
 }
-#scoreContainer img{
-    position: unset;
-    height: 200px;
-    top:100px;
-    left:325px;
-}
-#scoreContainer p{
-    position: absolute;
+
+#scoreContainer {
+    position: relative;
     display: block;
-    width : 59px;
-    height :59px;
+    width : 30rem;
+    height : 10rem;
     top:130px;
-    left:325px;
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
