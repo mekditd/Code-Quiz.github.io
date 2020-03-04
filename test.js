@@ -22,7 +22,7 @@ var questions = [
         choiceA: "Phoenix",
         choiceB: "Montgomery",
         choiceC: "Tallahassee",
-        correct_answer: "Phoenix",
+        correct_answer: "A",
         choiceD: "Raleigh"
     },
     {
@@ -33,7 +33,7 @@ var questions = [
         choiceB: "Ayrton Senna",
         choiceC: "Fernando Alonso",
         choiceD: "Jim Clark",
-        correct_answer: "Michael Schumacher"
+        correct_answer: "A"
 
     },
     {
@@ -44,7 +44,7 @@ var questions = [
         choiceB: "Count Chocula",
         choiceC: "Franken Berry",
         choiceD: "Boo-Berry",
-        correct_answer: "Fruit Brute",
+        correct_answer: "A",
 
     },
     {
@@ -55,7 +55,7 @@ var questions = [
         choiceB: "Rush Limbaugh",
         choiceC: "Pete Tong",
         choiceD: "Ryan Seacrest",
-        correct_answer: "Howard Stern"
+        correct_answer: "A"
 
     },
     {
@@ -66,7 +66,7 @@ var questions = [
         choiceB: "The Tempest",
         choiceC: "Othello",
         choiceD: "The Taming of the Shrew",
-        correct_answer: "Hamlet"
+        correct_answer: "A"
 
     },
 
@@ -74,11 +74,11 @@ var questions = [
         category: "Mythology",
 
         question: "Which of these mythological creatures is said to be half-man and half-horse?",
-        choiceA: "incorrect_answers",
+        choiceA: "Centaur",
         choiceB: "Minotaur",
         choiceC: "Pegasus",
         choiceD: "Gorgon",
-        correct_answer: "Centaur"
+        correct_answer: "A"
 
     },
     {
@@ -89,7 +89,7 @@ var questions = [
         choiceB: "A Dance with Dragons",
         choiceC: "A Storm of Swords",
         choiceD: "A Feast for Crows",
-        correct_answer: "A Clash of Kings"
+        correct_answer: "A "
 
     },
     {
@@ -100,7 +100,7 @@ var questions = [
         choiceB: "The Pikachu Line",
         choiceC: "The Elekid Line",
         choiceD: "The Magby Line",
-        correct_answer: "The Porygon Line"
+        correct_answer: "A"
 
     },
     {
@@ -109,7 +109,7 @@ var questions = [
         question: "Klingons express emotion in art through opera and poetry.",
         choiceA: "True",
         choiceB: "False",
-        correct_answer: "True"
+        correct_answer: "A"
 
     },
     {
@@ -118,7 +118,7 @@ var questions = [
         question: "Leonardo DiCaprio won an Oscar for Best Actor in 2004&#039;s &quot;The Aviator&quot;.",
         choiceA: "False",
         choiceB: "True",
-        correct_answer: "False"
+        correct_answer: "A"
 
     }
 
@@ -154,8 +154,7 @@ start.addEventListener("click", startQuiz);
 // start quiz
 function startQuiz() {
     start.style.display = "none";
-    renderCategory();
-    quiz.style.display = "block";
+
     renderQuestion();
     quiz.style.display = "block";
     renderProgress();
@@ -233,13 +232,7 @@ function scoreRender() {
     // calculate the amount of question percent answered by the user
     var scorePerCent = Math.round(100 * score / questions.length);
 
-    // choose the image based on the scorePerCent
-    var img = (scorePerCent >= 80) ? "img/5.png" :
-        (scorePerCent >= 60) ? "img/4.png" :
-            (scorePerCent >= 40) ? "img/3.png" :
-                (scorePerCent >= 20) ? "img/2.png" :
-
-                    scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
+        scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
 }
 // Restart Game
 function restartGame() {
